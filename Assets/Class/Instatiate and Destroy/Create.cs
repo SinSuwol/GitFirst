@@ -19,11 +19,6 @@ public class Create : MonoBehaviour
     }
 */
 
-    char value1 = 'V';
-    int value_2 = 10;
-    float value = 3.14f;
-
-
     //인스펙터 공개
     public GameObject prefab;
 
@@ -33,5 +28,10 @@ public class Create : MonoBehaviour
     {
         //Instantiate : 게임 오브젝트를 생성하는 함수
         Instantiate(prefab, new Vector3(0, 5, 0), Quaternion.identity);
+    }
+
+    public void PoolCreate()
+    {
+        ObjectPool.objpool.GetQueue();
     }
 }
